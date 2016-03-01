@@ -18,8 +18,9 @@
 		<script type="text/javascript"> 
 			$(document).ready(function()
 			{
-				$('#clickON').click(function()
-				{
+			
+				$('#clickON').mouseup(function() {
+					$('#debug').append( "<span style='color:#f00;'>Mouse up.</span>" );
 					var a = new XMLHttpRequest();
 					a.open("GET", "pinOn.php");
 					a.onreadystatechange=function()
@@ -34,10 +35,9 @@
 						}
 					}
 					a.send();
-				});
-
-				$('#clickOFF').click(function()
-				{
+				})
+				.mousedown(function() {
+					$('#debug').append( "<span style='color:#00f;'>Mouse down.</span>" );
 					var a = new XMLHttpRequest();
 					a.open("GET", "pinOff.php");
 					a.onreadystatechange=function()
@@ -53,15 +53,17 @@
 					}
 					a.send();
 				});
+
 			});
 		</script>
 
 	</head>
 
 	<body>
-	a test
+	V0.0.1 <br>
 		<button type="button" id="clickON">ON</button><br> 
-		<button type="button" id="clickOFF">OFF</button><br>
+		<div id='debug'>
+		</div>
 	</body>
 
 </html>
