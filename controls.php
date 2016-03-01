@@ -20,7 +20,7 @@
 			{
 			
 				$('#clickON').mousedown(function() {
-					$('#debug').append( "<span style='color:#f00;'>Mouse up.<br></span>" );
+					$('#debug').append("<span style='color:#00f;'>Mouse down.<br></span>");
 					var a = new XMLHttpRequest();
 					a.open("GET", "pinOn.php");
 					a.onreadystatechange=function()
@@ -37,7 +37,7 @@
 					a.send();
 				})
 				.mouseup(function() {
-					$('#debug').append( "<span style='color:#00f;'>Mouse down.<br></span>" );
+					$('#debug').append("<span style='color:#f00;'>Mouse up.<br></span>");
 					var a = new XMLHttpRequest();
 					a.open("GET", "pinOff.php");
 					a.onreadystatechange=function()
