@@ -59,6 +59,7 @@
 	</head>
 
 	<body>
+	a test
 		<button type="button" id="clickON">ON</button><br> 
 		<button type="button" id="clickOFF">OFF</button><br>
 	</body>
