@@ -37,9 +37,6 @@
 						send = yellow;
 					}
 						
-					
-					var led = 
-					
 					$('#debug').append("<span style='color:#00f;'>Mouse down on "+$('#led').val()+" .<br></span>");
 					var a = new XMLHttpRequest();
 					a.open("GET", "pinOn.php?led="+send);
@@ -57,6 +54,17 @@
 					a.send();
 				})
 				.mouseup(function() {
+					
+					var send = 0;
+					
+					if ($('#led').val() == 'red') {
+						send = red;
+					} else if ($('#led').val() == 'green') {
+						send = green;
+					} else if ($('#led').val() == 'yellow') {
+						send = yellow;
+					}
+					
 					$('#debug').append("<span style='color:#f00;'>Mouse up on "+$('#led').val()+" <br></span>");
 					var a = new XMLHttpRequest();
 					a.open("GET", "pinOff.php?led="+send);
