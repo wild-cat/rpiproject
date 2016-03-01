@@ -8,6 +8,6 @@
  * 2016-02-21
  */
 
-	system ("gpio -g mode 4 out");
-	system ("gpio -g write 4 1");
+	system ("gpio -g mode ".$_GET['led']." out");
+	system ("gpio -g write ".$_GET['led']." 1");
 ?>

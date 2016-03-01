@@ -16,13 +16,33 @@
 
 		<script src="jquery-1.12.1.min.js"></script>
 		<script type="text/javascript"> 
+		
+			var red = 4;
+			var green = 17;
+			var yellow = 27;
+		
+		
 			$(document).ready(function()
 			{
 			
 				$('#clickON').mousedown(function() {
-					$('#debug').append("<span style='color:#00f;'>Mouse down.<br></span>");
+					
+					var send = 0;
+					
+					if ($('#led').val() == 'red') {
+						send = red;
+					} else if ($('#led').val() == 'green') {
+						send = green;
+					} else if ($('#led').val() == 'yellow') {
+						send = yellow;
+					}
+						
+					
+					var led = 
+					
+					$('#debug').append("<span style='color:#00f;'>Mouse down on "+$('#led').val()+" .<br></span>");
 					var a = new XMLHttpRequest();
-					a.open("GET", "pinOn.php");
+					a.open("GET", "pinOn.php?led="+send);
 					a.onreadystatechange=function()
 					{
 						if(a.readyState==4)
@@ -37,9 +57,9 @@
 					a.send();
 				})
 				.mouseup(function() {
-					$('#debug').append("<span style='color:#f00;'>Mouse up.<br></span>");
+					$('#debug').append("<span style='color:#f00;'>Mouse up on "+$('#led').val()+" <br></span>");
 					var a = new XMLHttpRequest();
-					a.open("GET", "pinOff.php");
+					a.open("GET", "pinOff.php?led="+send);
 					a.onreadystatechange=function()
 					{
 						if(a.readyState==4)
@@ -60,7 +80,8 @@
 	</head>
 
 	<body>
-	V0.0.1 <br>
+	V0.0.2 <br>
+		<input type='text' name='led' id='led'>
 		<button type="button" id="clickON">ON</button><br> 
 		<div id='debug'>
 		</div>
