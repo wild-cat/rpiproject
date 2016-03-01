@@ -14,7 +14,7 @@
 		<meta charset = "UTF-8">
 		<title>Pi Controller</title>
 
-		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="jquery-1.12.1.min.js"></script>
 		<script type="text/javascript"> 
 			$(document).ready(function()
 			{
