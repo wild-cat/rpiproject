@@ -19,8 +19,8 @@
 			$(document).ready(function()
 			{
 			
-				$('#clickON').mouseup(function() {
-					$('#debug').append( "<span style='color:#f00;'>Mouse up.</span>" );
+				$('#clickON').mousedown(function() {
+					$('#debug').append( "<span style='color:#f00;'>Mouse up.<br></span>" );
 					var a = new XMLHttpRequest();
 					a.open("GET", "pinOn.php");
 					a.onreadystatechange=function()
@@ -36,8 +36,8 @@
 					}
 					a.send();
 				})
-				.mousedown(function() {
-					$('#debug').append( "<span style='color:#00f;'>Mouse down.</span>" );
+				.mouseup(function() {
+					$('#debug').append( "<span style='color:#00f;'>Mouse down.<br></span>" );
 					var a = new XMLHttpRequest();
 					a.open("GET", "pinOff.php");
 					a.onreadystatechange=function()
