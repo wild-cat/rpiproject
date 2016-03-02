@@ -6,6 +6,8 @@
 	PHP file for testing LED activation in a web browser : controls.php
 	@author GL
 	2016-02-21
+	@author MH
+	2016-03-01
 -->
 
 <html>
