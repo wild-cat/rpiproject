@@ -24,6 +24,8 @@ session_start();
 	 
  }
  
+ sleep(5000);
+ 
 	
 	for ($i=1;$i<=5;$i++) {
 		
@@ -41,6 +43,8 @@ session_start();
 		system ($cmd);
 		
 		echo "SEND: ".$cmd;
+		
+		sleep(500);
 		
 	}
 	
