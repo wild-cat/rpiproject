@@ -32,6 +32,12 @@
 					{
 						if(a.readyState==4)
 						{
+							
+							var msg = a.responseText;
+							
+							$('#debug').append(msg+'<br>');
+							
+							
 							if(a.status == 200){}
 							else
 							{
