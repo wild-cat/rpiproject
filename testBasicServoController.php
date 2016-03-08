@@ -19,7 +19,7 @@
 		<script src="jquery-1.12.1.min.js"></script>
 		<script type="text/javascript">
 
-			var servoPin = 12;
+			
 
 			$(document).ready(function()
 			{
@@ -27,18 +27,21 @@
 				$('#clickLeft').click(function() {
 					$('#debug').append("<span style='color:#00f;'>To the left<br></span>");
 					var a = new XMLHttpRequest();
-					a.open("GET", "servoLeft.php?servoPin="+servoPin);
+					
+					var servoPin = $('#servoPin').val();
+					
+					a.open("GET", "servoLeft.php?servoPin="+servoPin+'&spin='+$('#spin').val());
 					a.onreadystatechange=function()
 					{
 						if(a.readyState==4)
 						{
 							
-							var msg = a.responseText;
-							
-							$('#debug').append(msg+'<br>');
-							
-							
-							if(a.status == 200){}
+							if (a.status == 200){
+								
+								var msg = a.responseText;
+								$('#debug').append(msg+'<br>');
+								
+							}
 							else
 							{
 								alert("Error")
@@ -51,6 +54,9 @@
 				$('#clickMiddle').click(function() {
 					$('#debug').append("<span style='color:#00f;'>To the center<br></span>");
 					var a = new XMLHttpRequest();
+					
+					var servoPin = $('#servoPin').val();
+					
 					a.open("GET", "servoCenter.php?servoPin="+servoPin);
 					a.onreadystatechange=function()
 					{
@@ -69,6 +75,9 @@
 				$('#clickRight').click(function() {
 					$('#debug').append("<span style='color:#00f;'>To the right<br></span>");
 					var a = new XMLHttpRequest();
+					
+					var servoPin = $('#servoPin').val();
+					
 					a.open("GET", "servoRight.php?servoPin="+servoPin);
 					a.onreadystatechange=function()
 					{
@@ -91,6 +100,8 @@
 
 	<body>
 	Basic Servo Test<br>
+		Servo PIN: <input type='text' id='servoPin'><br>
+		SPIN: <input type='text' id='spin'>
 		<button type="button" id="clickLeft">LEFT</button>
 		<button type="button" id="clickMiddle">CENTER</button>
 		<button type="button" id="clickRight">RIGHT</button>

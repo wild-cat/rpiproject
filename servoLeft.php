@@ -9,7 +9,7 @@
  *
  */
 	
-	for ($i=25;$i>=65;$i+=5) {
+//	for ($i=25;$i>=65;$i+=5) {
 		
 		$cmd = "gpio -1 mode ".$_GET['servoPin']." pwm";
 		system ($cmd);
@@ -21,14 +21,14 @@
 		
 		echo "SEND: ".$cmd;
 		
-		$cmd = "gpio -1 pwm ".$_GET['servoPin']." ".$i;
+		$cmd = "gpio -1 pwm ".$_GET['servoPin']." ".$_GET['spin'];
 		system ($cmd);
 		
 		echo "SEND: ".$cmd;
 		
 		
-		sleep(500);
-	}
+	///	sleep(500);
+//	}
 
  	/* 25 is minimum value with these options */
 
