@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+
+session_start();
+
+$_SESSION['spin'] = 0;
+
+?><!DOCTYPE html>
 
 <!--
 	Project RPi Turret
