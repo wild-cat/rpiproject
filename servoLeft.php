@@ -21,7 +21,7 @@
 		
 		echo "SEND: ".$cmd." \r\n";
 		
-		$cmd = "gpio -1 pwm ".$_GET['servoPin']." ".$_GET['spin'];
+		$cmd = "gpio -1 pwm ".$_GET['servoPin']." ".$i;
 		system ($cmd);
 		
 		echo "SEND: ".$cmd." \r\n";
