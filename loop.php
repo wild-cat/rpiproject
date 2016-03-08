@@ -1,12 +1,9 @@
 	<?
 	
 	
-	for ($i=25;$i<=65;$i++) {
+	for ($i=0;$i<=5;$i++) {
 		
-		echo "SEND: test \r\n";
-		echo "SEND: test \r\n";
-		echo "SEND: test \r\n";
-		sleep(1000);
+		echo $i."\r\n";
 	}
 	
 	
