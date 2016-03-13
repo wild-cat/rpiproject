@@ -30,6 +30,7 @@ include "config.php";
 		<title>Pi Basic Servo Controller</title>
 
 		<script src="jquery-1.12.1.min.js"></script>
+		<script src="ajax.js"></script>
 		<script src="ajaxBasic.js"></script>
 		<script src="ajaxCont.js"></script>
 
