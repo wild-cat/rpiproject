@@ -1,3 +1,6 @@
+var mouseClicked = true;
+
+
 $(document).ready(
 				function() {
 					$('#counting').
@@ -6,6 +9,7 @@ $(document).ready(
 						
 						$('#debug').append("<span style='color:#00f;'>Count<br></span>");
 						
+						mouseClicked = true;
 						doStuff();
 						
 					})
@@ -13,6 +17,8 @@ $(document).ready(
 						
 						$('#debug').append("<span style='color:#f00;'>Stop<br></span>");
 						
+						mouseClicked = false;
+						/*
 						$.ajax({
 							type: 'POST',
 							cache: false,
@@ -24,7 +30,7 @@ $(document).ready(
 								$('#debug').append(data + '<br>');
 							},
 							
-						});
+						});*/
 						
 					});
 });
@@ -38,17 +44,22 @@ function doStuff() {
 
 function continueExecution() {
 	
-	$.ajax({
-		type: 'POST',
-		cache: false,
-		url: 'sleep_test.php?a=start',
-		data: '',
-		dataType: 'html', 
+	if (mouseClicked) {
+	
+		$.ajax({
+			type: 'POST',
+			cache: false,
+			url: 'sleep_test.php?a=start',
+			data: '',
+			dataType: 'html', 
+			
+			success: function(data, status, xml) {
+				$('#debug').append(data + '<br>');
+			},
+			
+		});
 		
-		success: function(data, status, xml) {
-			$('#debug').append(data + '<br>');
-		},
-		
-	});
+		setTimeout(continueExecution, 1000);
+	}
 	
 }
