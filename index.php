@@ -13,7 +13,7 @@ session_start();
 
 $_SESSION['servoPinBasic'] = 12;
 $_SESSION['servoPinCont'] = 33;
-$_SESSION['servoBasicPosition'] = 0;
+$_SESSION['servoBasicPosition'] = 65;
 $_SESSION['firePin'] = 7;
 $_SESSION['spin'] = 0;
 
