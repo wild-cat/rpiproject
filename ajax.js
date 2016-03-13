@@ -51,4 +51,22 @@ $(document).ready(
 									
 								});
 							});
+					
+					$('#clickStop').click(
+							function() {
+								$('#debug').append("<span style='color:000000;'>Stop<br></span>");
+								
+								$.ajax({
+									type: 'POST',
+									cache: false,
+									url: 'servoStop.php',
+									data: '',
+									dataType: 'html', 
+									
+									success: function(data, status, xml) {
+										$('#debug').append(data + '<br>');
+									},
+									
+								});
+							});
 				});

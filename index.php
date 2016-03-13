@@ -11,8 +11,8 @@
 
 session_start();
 
-$_SESSION['servoPinBasic'] = 33;
-$_SESSION['servoPinCont'] = 12;
+$_SESSION['servoPinBasic'] = 12;
+$_SESSION['servoPinCont'] = 33;
 $_SESSION['spin'] = 0;
 
 include "config.php";
@@ -34,7 +34,8 @@ include "config.php";
 	Basic Servo Test<br>
 		<button type="button" id="clickLeft">LEFT</button>
 		<button type="button" id="clickMiddle">CENTER</button>
-		<button type="button" id="clickRight">RIGHT</button>
+		<button type="button" id="clickRight">RIGHT</button><br>
+		<button type="button" id="clickStop">STOP</button>
 
 		<div id='debug'>
 		</div>
