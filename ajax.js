@@ -11,8 +11,8 @@ $(document).ready(
 						$.ajax({
 							type: 'POST',
 							cache: false,
-							url: 'fireButton.php?action=start',
-							data: '',
+							url: 'fireButton.php',
+							data: 'action=start',
 							dataType: 'html', 
 							
 							success: function(data, status, xml) {
@@ -29,8 +29,8 @@ $(document).ready(
 						$.ajax({
 							type: 'POST',
 							cache: false,
-							url: 'fireButton.php?action=stop',
-							data: '',
+							url: 'fireButton.php',
+							data: 'action=stop',
 							dataType: 'html', 
 							
 							success: function(data, status, xml) {
