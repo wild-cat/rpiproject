@@ -147,7 +147,7 @@ function continueExecutionRight() {
 			
 		});
 		
-		setTimeout(continueExecutionRight, 200);
+		setTimeout(continueExecutionRight, 50);
 	}
 	
 }
@@ -169,7 +169,7 @@ function continueExecutionLeft() {
 			
 		});
 		
-		setTimeout(continueExecutionLeft, 200);
+		setTimeout(continueExecutionLeft, 50);
 	}
 	
 }
