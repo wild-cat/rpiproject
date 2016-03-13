@@ -108,13 +108,12 @@ $(document).ready(
 						$('#debug').append("<span style='color:#00f;'>Basic Servo Turn Left <br><br></span>");
 						mouseHold = true;
 						
-						doStuffLeft(); //turnRightBasicServo.php
+						continueExecutionLeft(); //turnRightBasicServo.php
 						
 					})
 					.mouseup(function() {
 						
 						$('#debug').append("<span style='color:#f00;'>Stop<br></span>");
-						
 						mouseHold = false;
 						
 					});
@@ -148,7 +147,29 @@ function continueExecutionRight() {
 			
 		});
 		
-		setTimeout(continueExecutionRight, 500);
+		setTimeout(continueExecutionRight, 200);
+	}
+	
+}
+
+function continueExecutionLeft() {
+	
+	if (mouseHold) {
+	
+		$.ajax({
+			type: 'POST',
+			cache: false,
+			url: 'turnLeftBasicServo.php',
+			data: '',
+			dataType: 'html', 
+			
+			success: function(data, status, xml) {
+				$('#debug').append(data + '<br>');
+			},
+			
+		});
+		
+		setTimeout(continueExecutionLeft, 200);
 	}
 	
 }
