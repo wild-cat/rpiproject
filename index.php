@@ -46,6 +46,11 @@ include "config.php";
 
 		<div id='debug'>
 		</div>
+		
+		<iframe src="http://192.168.1.98:8081" height="400px" width="400px">
+		</iframe>
+		
+		
 	</body>
 
 </html>
