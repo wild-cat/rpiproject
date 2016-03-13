@@ -1,4 +1,13 @@
 <?php
+/*
+ * Project RPi Turret
+ * 
+ * This is the main page of the servo Controller
+ *
+ * @author GL
+ * 2016-03-07
+ *
+ */
 
 session_start();
 

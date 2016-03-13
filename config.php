@@ -10,7 +10,10 @@
  *
  */
 
-system ("gpio -1 mode ".$_SESSION['servoPin']." pwm");
+system ("gpio -1 mode ".$_SESSION['servoPinBasic']." pwm");
+system ("gpio -1 mode ".$_SESSION['servoPinCont']." pwm");
+
 system ("gpio pwm-ms && gpio pwmc 400 && gpio pwmr 1000");
+
 
 ?>
