@@ -16,6 +16,8 @@ $_SESSION['servoPinCont'] = 33;
 $_SESSION['servoBasicPosition'] = 0;
 $_SESSION['spin'] = 0;
 
+print_r($_SERVER);
+
 include "config.php";
 
 
