@@ -37,9 +37,8 @@ include "config.php";
 		<button type="button" id="clickMiddle">CENTER</button>
 		<button type="button" id="clickRight">RIGHT</button><br>
 	Continues Servo<br>
-		<button type="button" id="contServoLeft">></button>
-		<button type="button" id="contServoRight"><</button><br>
-		<button type="button" id="contStop">STOP</button>
+		<button type="button" id="contServoLeft"><</button>
+		<button type="button" id="contServoRight">></button><br>
 
 		<div id='debug'>
 		</div>
