@@ -32,8 +32,6 @@ include "config.php";
 
 	<body>
 	Basic Servo Test<br>
-		Servo PIN: <input type='text' id='servoPin' value='12'><br>
-		SPIN: <input type='text' id='spin'>
 		<button type="button" id="clickLeft">LEFT</button>
 		<button type="button" id="clickMiddle">CENTER</button>
 		<button type="button" id="clickRight">RIGHT</button>
