@@ -12,7 +12,9 @@ session_start();
  * 2016-03-05
  *
  */
-system ("gpio -1 pwm ".$_SESSION['servoPinBasic']." 25");
+$cmd = "gpio -1 pwm ".$_SESSION['servoPinBasic']." 25";
+system ($cmd);
+echo "CMD: ".$cmd;
 
 /* 105 is maximum value with these options */
  

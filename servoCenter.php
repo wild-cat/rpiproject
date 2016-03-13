@@ -12,7 +12,9 @@
 // 	system ("gpio -1 mode ".$_GET['servoPin']." pwm");
 // 	system ("gpio -1 pwm-ms && gpio pwmc 400 && gpio pwmr 1000");
 session_start();
-system ("gpio -1 pwm ".$_SESSION['servoPinBasic']." 65");
+$cmd = "gpio -1 pwm ".$_SESSION['servoPinBasic']." 65";
+system ($cmd);
+echo "CMD: ".$cmd;
 
 	/* 65 is the medium value with these options */
 
