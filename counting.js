@@ -6,9 +6,7 @@ $(document).ready(
 						
 						$('#debug').append("<span style='color:#00f;'>Count<br></span>");
 						
-						while(true) {
-							doStuff();
-						}
+						doStuff();
 						
 					})
 					.mouseup(function() {
