@@ -2,8 +2,6 @@
 
 session_start();	
 
-print_r($_SESSION);
-
 if ($_SESSION['servoBasicPosition'] >= 25) {
 	
 	$_SESSION['servoBasicPosition']--;
