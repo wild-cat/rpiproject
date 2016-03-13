@@ -12,7 +12,7 @@
 
 system ("gpio -1 mode ".$_SESSION['servoPinBasic']." pwm");
 system ("gpio -1 mode ".$_SESSION['servoPinCont']." pwm");
-
+system ("gpio -1 mode ".$_SESSION['firePin']." out");
 system ("gpio pwm-ms && gpio pwmc 400 && gpio pwmr 1000");
 
 

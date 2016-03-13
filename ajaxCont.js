@@ -121,15 +121,6 @@ $(document).ready(
 });
 
 
-function doStuffRight() {
-	//setTimeout(continueExecutionRight, 500);
-}
-
-function doStuffLeft() {
-	//setTimeout(continueExecution, 500);
-}
-
-
 function continueExecutionRight() {
 	
 	if (mouseHold) {

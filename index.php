@@ -14,6 +14,7 @@ session_start();
 $_SESSION['servoPinBasic'] = 12;
 $_SESSION['servoPinCont'] = 33;
 $_SESSION['servoBasicPosition'] = 0;
+$_SESSION['firePin'] = 7;
 $_SESSION['spin'] = 0;
 
 //print_r($_SERVER);
@@ -45,6 +46,9 @@ include "config.php";
 	Continues Servo<br>
 		<button type="button" id="contServoLeft"><</button>
 		<button type="button" id="contServoRight">></button><br>
+		
+		FIRE!
+		<button type="button" id="fireButton">FIRE!</button><br>
 
 		<div id='debug'>
 		</div>
