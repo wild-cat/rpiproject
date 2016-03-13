@@ -25,7 +25,7 @@ $(document).ready(
 
 
 function doStuff() {
-	setTimeout(continueExecution, 300);
+	setTimeout(continueExecution, 500);
 }
 
 
@@ -46,7 +46,7 @@ function continueExecution() {
 			
 		});
 		
-		setTimeout(continueExecution, 300);
+		setTimeout(continueExecution, 500);
 	}
 	
 }
