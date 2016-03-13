@@ -18,19 +18,6 @@ $(document).ready(
 						$('#debug').append("<span style='color:#f00;'>Stop<br></span>");
 						
 						mouseClicked = false;
-						/*
-						$.ajax({
-							type: 'POST',
-							cache: false,
-							url: 'sleep_test.php?a=stop',
-							data: '',
-							dataType: 'html', 
-							
-							success: function(data, status, xml) {
-								$('#debug').append(data + '<br>');
-							},
-							
-						});*/
 						
 					});
 });
@@ -38,7 +25,7 @@ $(document).ready(
 
 
 function doStuff() {
-	setTimeout(continueExecution, 500);
+	setTimeout(continueExecution, 300);
 }
 
 
@@ -59,7 +46,7 @@ function continueExecution() {
 			
 		});
 		
-		setTimeout(continueExecution, 500);
+		setTimeout(continueExecution, 300);
 	}
 	
 }
