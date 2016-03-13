@@ -2,10 +2,11 @@
 
 session_start();	
 
-$_SESSION['servoBasicPosition']--;
 
-if ($_SESSION['servoBasicPosition'] != 25) {
+
+if ($_SESSION['servoBasicPosition'] >= 25) {
 	
+	$_SESSION['servoBasicPosition']--;
 
 	$cmd = "gpio -1 pwm ".$_SESSION['servoPinBasic']." ".$_SESSION['servoBasicPosition'];
 	system ($cmd);
@@ -13,7 +14,7 @@ if ($_SESSION['servoBasicPosition'] != 25) {
 	
 } else {
 	
-	echo "Maxium spin reached!";
+	echo "Minimum spin reached!";
 	
 }
 
