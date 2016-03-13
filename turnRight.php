@@ -11,8 +11,8 @@
 
 // 	system ("gpio -1 mode ".$_GET['csPin']." pwm");
 // 	system ("gpio pwm-ms && gpio pwmc 400 && gpio pwmr 1000");
-session_start();
-	system ("gpio -1 pwm ".$_SESSION['servoPinCont']." 74");
+	session_start();
+	system ("gpio -1 pwm ".$_SESSION['servoPinCont']." 75");
 
 	/* 74 is a value near 71-72 which are the "non-moving" values with these options */
 
