@@ -14,7 +14,9 @@
 	$cmd = "gpio -1 pwm ".$_SESSION['servoPinBasic']." 105";
 	system ($cmd);
 	echo "CMD: ".$cmd;
-
+	
+	$_SESSION['servoBasicPosition'] = 105;
+1
 	/* 105 is maximum value with these options */
 
 ?>
