@@ -26,16 +26,20 @@ include "config.php";
 		<title>Pi Basic Servo Controller</title>
 
 		<script src="jquery-1.12.1.min.js"></script>
-		<script src="ajax.js"></script>
+		<script src="ajaxBasic.js"></script>
+		<script src="ajaxCont.js"></script>
 
 	</head>
 
 	<body>
-	Basic Servo Test<br>
+	Basic Servo<br>
 		<button type="button" id="clickLeft">LEFT</button>
 		<button type="button" id="clickMiddle">CENTER</button>
 		<button type="button" id="clickRight">RIGHT</button><br>
-		<button type="button" id="clickStop">STOP</button>
+	Continues Servo<br>
+		<button type="button" id="contServoLeft">></button>
+		<button type="button" id="contServoRight"><</button><br>
+		<button type="button" id="contStop">STOP</button>
 
 		<div id='debug'>
 		</div>
