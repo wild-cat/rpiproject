@@ -11,6 +11,8 @@ if ($_POST['action'] == 'stop') {
 	$action = 1;
 }
 
+print_r($_POST);
+
 $cmd = "gpio -1 write ".$_SESSION['firePin']." ".$action;
 system ($cmd);
 echo "CMD: ".$cmd;
