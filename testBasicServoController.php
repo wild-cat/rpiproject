@@ -2,7 +2,12 @@
 
 session_start();
 
+
+$_SESSION['servoPin'] = 12;
 $_SESSION['spin'] = 0;
+
+include "config.php";
+
 
 ?><!DOCTYPE html>
 
@@ -106,7 +111,7 @@ $_SESSION['spin'] = 0;
 
 	<body>
 	Basic Servo Test<br>
-		Servo PIN: <input type='text' id='servoPin'><br>
+		Servo PIN: <input type='text' id='servoPin' value='12'><br>
 		SPIN: <input type='text' id='spin'>
 		<button type="button" id="clickLeft">LEFT</button>
 		<button type="button" id="clickMiddle">CENTER</button>
