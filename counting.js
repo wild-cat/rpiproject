@@ -6,18 +6,9 @@ $(document).ready(
 						
 						$('#debug').append("<span style='color:#00f;'>Count<br></span>");
 						
-						$.ajax({
-							type: 'POST',
-							cache: false,
-							url: 'sleep_test.php?a=start',
-							data: '',
-							dataType: 'html', 
-							
-							success: function(data, status, xml) {
-								$('#debug').append(data + '<br>');
-							},
-							
-						});
+						while(true) {
+							doStuff();
+						}
 						
 					})
 					.mouseup(function() {
@@ -39,3 +30,27 @@ $(document).ready(
 						
 					});
 });
+
+
+
+function doStuff() {
+	setTimeout(continueExecution, 1000);
+}
+
+
+function continueExecution() {
+	
+	$.ajax({
+		type: 'POST',
+		cache: false,
+		url: 'sleep_test.php?a=start',
+		data: '',
+		dataType: 'html', 
+		
+		success: function(data, status, xml) {
+			$('#debug').append(data + '<br>');
+		},
+		
+	});
+	
+}
