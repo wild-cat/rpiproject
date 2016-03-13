@@ -38,7 +38,7 @@ $(document).ready(
 
 
 function doStuff() {
-	setTimeout(continueExecution, 1000);
+	setTimeout(continueExecution, 500);
 }
 
 
@@ -59,7 +59,7 @@ function continueExecution() {
 			
 		});
 		
-		setTimeout(continueExecution, 1000);
+		setTimeout(continueExecution, 500);
 	}
 	
 }
