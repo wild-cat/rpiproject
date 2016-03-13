@@ -36,6 +36,9 @@ include "config.php";
 		<button type="button" id="clickLeft">LEFT</button>
 		<button type="button" id="clickMiddle">CENTER</button>
 		<button type="button" id="clickRight">RIGHT</button><br>
+	Basic Servo with coninuous approch<br>
+		<button type="button" id="basicServoLeftCont"><</button>
+		<button type="button" id="basicServoRightCont">></button><br>
 	Continues Servo<br>
 		<button type="button" id="contServoLeft"><</button>
 		<button type="button" id="contServoRight">></button><br>

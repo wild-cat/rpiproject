@@ -1,3 +1,5 @@
+var mouseHold = false;
+
 $(document).ready(
 				function() {
 					
@@ -80,4 +82,73 @@ $(document).ready(
 						
 					});
 					
+					//BASIC SERVO ON CONTINUOUS RULES
+					
+					$('#basicServoRightCont').
+					
+					mousedown(function() {
+						
+						$('#debug').append("<span style='color:#00f;'>Basic Servo Turn Right <br></span>");
+						mouseHold = true;
+						
+						continueExecutionRight();
+						
+					})
+					.mouseup(function() {
+						
+						$('#debug').append("<span style='color:#f00;'>Stop<br></span>");
+						mouseHold = false;
+						
+					});
+
+					$('#basicServoLeftCont').
+					
+					mousedown(function() {
+						
+						$('#debug').append("<span style='color:#00f;'>Basic Servo Turn Left <br><br></span>");
+						mouseHold = true;
+						
+						doStuffLeft(); //turnRightBasicServo.php
+						
+					})
+					.mouseup(function() {
+						
+						$('#debug').append("<span style='color:#f00;'>Stop<br></span>");
+						
+						mouseHold = false;
+						
+					});
+					
 });
+
+
+function doStuffRight() {
+	//setTimeout(continueExecutionRight, 500);
+}
+
+function doStuffLeft() {
+	//setTimeout(continueExecution, 500);
+}
+
+
+function continueExecutionRight() {
+	
+	if (mouseHold) {
+	
+		$.ajax({
+			type: 'POST',
+			cache: false,
+			url: 'turnRightBasicServo.php',
+			data: '',
+			dataType: 'html', 
+			
+			success: function(data, status, xml) {
+				$('#debug').append(data + '<br>');
+			},
+			
+		});
+		
+		setTimeout(continueExecutionRight, 500);
+	}
+	
+}
