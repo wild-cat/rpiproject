@@ -50,13 +50,12 @@ include "config.php";
 		
 		FIRE!
 		<button type="button" id="fireButton">FIRE!</button><br>
-
-		<div id='debug'>
-		</div>
 		
 		<iframe src="http://<?=$_SERVER['SERVER_ADDR']?>:8081" height="400px" width="400px">
 		</iframe>
-		
+
+		<div id='debug'>
+		</div>
 		
 	</body>
 

@@ -5,9 +5,9 @@ session_start();
 
 $action = 0;
 
-if ($_POST['action'] == 0) {
+if ($_POST['action'] == 'stop') {
 	$action = 0;
-} else if ($_POST['action'] == 1) {
+} else if ($_POST['action'] == 'start') {
 	$action = 1;
 }
 
