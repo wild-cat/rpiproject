@@ -55,6 +55,7 @@ include "config.php";
 		</iframe>
 
 		<div id='debug'>
+			<?php ?>
 		</div>
 		
 	</body>
