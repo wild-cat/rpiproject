@@ -54,7 +54,7 @@ include "config.php";
 		<iframe src="http://<?=$_SERVER['SERVER_ADDR']?>:8081" height="400px" width="400px">
 		</iframe>
 
-		<div id='debug'>
+		<div id='debug' style='display: none;'>
 			<?php ?>
 		</div>
 		
