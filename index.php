@@ -27,7 +27,7 @@ include "config.php";
 
 	<head>
 		<meta charset = "UTF-8">
-		<title>Pi Basic Servo Controller</title>
+		<title>Pi Turret Controller</title>
 
 		<script src="jquery-1.12.1.min.js"></script>
 		<script src="ajax.js"></script>
@@ -37,27 +37,62 @@ include "config.php";
 	</head>
 
 	<body>
-	Basic Servo<br>
-		<button type="button" id="clickLeft">LEFT</button>
-		<button type="button" id="clickMiddle">CENTER</button>
-		<button type="button" id="clickRight">RIGHT</button><br>
-	Basic Servo with coninuous approch<br>
-		<button type="button" id="basicServoLeftCont"><</button>
-		<button type="button" id="basicServoRightCont">></button><br>
-	Continues Servo<br>
-		<button type="button" id="contServoLeft"><</button>
-		<button type="button" id="contServoRight">></button><br>
-		
-		FIRE!
-		<button type="button" id="fireButton">FIRE!</button><br>
-		
+		<!--Basic Servo<br>
+			<button type="button" id="clickLeft">LEFT</button>
+			<button type="button" id="clickMiddle">CENTER</button>
+			<button type="button" id="clickRight">RIGHT</button><br>
+		-->
+
+		<div>
+			<table>
+  				<tr>
+					<td>
+						<!-- Empty 'cell' -->
+					</td>
+ 					<td>
+						<!--Basic Servo with continuous approach : UP-->
+						<button type="button" id="basicServoLeftCont">^</button>
+					</td>
+		    			<td>
+						<!-- Empty 'cell' -->
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!--Continuous Servo : LEFT-->
+						<button type="button" id="contServoLeft"><</button>
+					</td>
+					<td>
+						<!--FIRE!-->
+						<button type="button" id="fireButton" style="color:red;">F</button>
+					</td>
+					<td>
+						<!--Continuous Servo : RIGHT-->
+						<button type="button" id="contServoRight">></button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<!-- Empty 'cell' -->
+					</td>
+					<td>
+						<!--Basic Servo with continuous approach : DOWN-->
+						<button type="button" id="basicServoRightCont">v</button>
+					</td>
+					<td>
+						<!-- Empty 'cell' -->
+					</td>
+				</tr>
+			</table>
+		</div>
+
 		<iframe src="http://<?=$_SERVER['SERVER_ADDR']?>:8081" height="400px" width="400px">
 		</iframe>
 
 		<div id='debug' style='display: none;'>
 			<?php ?>
 		</div>
-		
+
 	</body>
 
 </html>
