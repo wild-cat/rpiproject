@@ -12,8 +12,13 @@ h2                              { color: #fa9f00; font: 30px Helvetica, Sans-Ser
 
 #send-message-area p            { float: left; color: white; padding-top: 27px; font-size: 14px; }
 #sendie                         { border: 3px solid #999; width: 360px; padding: 10px; font: 12px "Lucida Grande", Sans-Serif; float: right; }
+
 button {
 	width:125px;
 	height: 125px;
 	font-size: 30px;
+}
+
+img {
+	height: 575px;
 }

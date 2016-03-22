@@ -88,8 +88,11 @@ include "config.php";
 			</table>
 		</div>
 
-		<iframe style='top:50px;left:50px;'
+		<iframe style='top:50px;left:50px;' id='myFrame'
 		src="http://<?=$_SERVER['SERVER_ADDR']?>:8081" height="800px" width="800px">
+		
+		<img alt="" src="">
+		
 		</iframe>
 
 		<div id='debug' style='display: none;'>
