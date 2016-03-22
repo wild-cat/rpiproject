@@ -45,7 +45,7 @@ include "config.php";
 			<button type="button" id="clickRight">RIGHT</button><br>
 		-->
 
-		<div style='position: absolute;right:150px;top:120px'>
+		<div style='position: absolute;right:5px;top:120px'>
 			<table>
   				<tr>
 					<td>
@@ -89,7 +89,7 @@ include "config.php";
 		</div>
 
 		<iframe style='top:50px;left:50px;' id='myFrame'
-		src="http://<?=$_SERVER['SERVER_ADDR']?>:8081" height="800px" width="800px">
+		src="http://<?=$_SERVER['SERVER_ADDR']?>:8081" height="600px" width="600px">
 		
 		<img alt="" src="">
 		
