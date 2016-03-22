@@ -33,6 +33,8 @@ include "config.php";
 		<script src="ajax.js"></script>
 		<script src="ajaxBasic.js"></script>
 		<script src="ajaxCont.js"></script>
+		
+		<link rel="stylesheet" href="a/style.css" type="text/css" />
 
 	</head>
 
@@ -43,7 +45,7 @@ include "config.php";
 			<button type="button" id="clickRight">RIGHT</button><br>
 		-->
 
-		<div>
+		<div style='position: absolute;right:150px;top:120px'>
 			<table>
   				<tr>
 					<td>
@@ -64,7 +66,7 @@ include "config.php";
 					</td>
 					<td>
 						<!--FIRE!-->
-						<button type="button" id="fireButton" style="color:red;">F</button>
+						<button type="button" id="fireButton" style="color:red;">FIRE!</button>
 					</td>
 					<td>
 						<!--Continuous Servo : RIGHT-->
@@ -86,7 +88,8 @@ include "config.php";
 			</table>
 		</div>
 
-		<iframe src="http://<?=$_SERVER['SERVER_ADDR']?>:8081" height="400px" width="400px">
+		<iframe style='top:50px;left:50px;'
+		src="http://<?=$_SERVER['SERVER_ADDR']?>:8081" height="800px" width="800px">
 		</iframe>
 
 		<div id='debug' style='display: none;'>
